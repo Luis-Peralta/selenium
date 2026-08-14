@@ -1,5 +1,6 @@
 package tests;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -16,6 +17,8 @@ public class LoginTest {
 
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
+
+        assertTrue(loginPage.isLoginSuccessful());
 
         driver.quit();
     }

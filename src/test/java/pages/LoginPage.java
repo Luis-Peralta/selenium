@@ -36,4 +36,8 @@ public class LoginPage {
         enterPassword(password);
         clickLogin();
     }
+
+    public boolean isLoginSuccessful() {
+        return driver.getCurrentUrl().contains("inventory.html");
+    }
 }
