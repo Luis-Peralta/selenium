@@ -10,13 +10,14 @@ public class LoginPage {
     private final By usernameInput = By.id("user-name");
     private final By passwordInput = By.id("password");
     private final By loginButton = By.id("login-button");
+    private final String url = "https://www.saucedemo.com/";
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void open() {
-        driver.get("https://www.saucedemo.com/");
+        driver.get(url);
     }
 
     public void enterUsername(String username) {
